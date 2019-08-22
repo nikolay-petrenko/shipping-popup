@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,218 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
+	<div class="shipping">
+		<div class="shipping__container">
+			<div class="shipping__header">
+				<h2 class="shipping__main-title">Express Checkout</h2>
+				<p class="shipping__subtitle">Please enter you details below to complete your purchase...</p>
+			</div>
+			<form class="shipping__content" onsubmit="return false">
+
+				<!-- Billing Address -->
+				<div class="shipping__column">
+					<fieldset class="shipping__step shipping__billing-address">
+						<h3 class="shipping__title shipping__title--counter">Billing Address</h3>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>First Name</b>
+								<input type="text" name="first-name" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Last Name</b>
+								<input type="text" name="last-name" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Email Address</b>
+								<input type="text" name="email" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Telephone</b>
+								<input type="text" name="phone" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Billing Address</b>
+								<textarea name="billing-address" rows="3" class="shipping__textarea"></textarea>
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Suburb/Town</b>
+								<input type="text" name="locality" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>State/Territory</b>
+								<select name="state" class="shipping__select">
+									<option value="foo">Foo</option>
+									<option value="bar">Bar</option>
+									<option value="baz">Baz</option>
+								</select>
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Postcode</b>
+								<input type="text" name="postcode" class="shipping__input">
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<b>Country</b>
+								<select name="country" class="shipping__select">
+									<option value="foo">Apple</option>
+									<option value="bar">Orange</option>
+									<option value="baz">Plum</option>
+								</select>
+							</label>
+						</div>
+						<div class="shipping__row">
+							<label class="shipping__label">
+								<input type="checkbox" name="same-address-true">
+								Ship to the same address
+							</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="shipping__column shipping__column--border">
+					<!-- Shipping Method -->
+					<fieldset class="shipping__step shipping__shipping-method">
+						<h3 class="shipping__title shipping__title--counter">Shipping Method</h3>
+						<div class="shipping__row">
+							<dl class="shipping__determ-list">
+								<dt>
+									<label class="shipping__label">
+										<input type="radio" name="shipping" value="regular">
+										Regular (6-21 days)
+									</label>
+								</dt>
+								<dd>Free</dd>
+							</dl>
+						</div>
+						<div class="shipping__row">
+							<dl class="shipping__determ-list">
+								<dt>
+									<label class="shipping__label">
+										<input type="radio" name="shipping" value="express">
+										Regular (3-6 days, tracking)
+									</label>
+								</dt>
+								<dd>10.00</dd>
+							</dl>
+						</div>
+						<div class="shipping__row">
+							<a href="#" target="_blank" class="shipping__link">See more info on shipping</a>
+						</div>
+					</fieldset>
+
+					<!-- Payment Method -->
+					<div class="shipping__step">
+						<fieldset class="shipping__payment-type shipping__payment-card">
+							<h3 class="shipping__title shipping__title--counter">Payment Method</h3>
+							<div class="shipping__row">
+								<dl class="shipping__determ-list">
+									<dt>
+										<label class="shipping__label shipping__label--flex">
+											<input type="radio" name="payment-method" value="card">
+											<b class="inline">Credit Card</b>
+										</label>
+									</dt>
+									<dd>
+										<img src="img/visa.png" alt="PayPal Logo" class="shipping__payment-img">
+										<img src="img/mastercard.png" alt="PayPal Logo" class="shipping__payment-img">
+										<img src="img/american-express.png" alt="PayPal Logo" class="shipping__payment-img">
+									</dd>
+								</dl>
+							</div>
+							<div class="shipping__row">
+								<label class="shipping__label">
+									<b>Credit Card</b>
+									<input type="text" class="shipping__input" placeholder="Credit Card Number">
+								</label>
+							</div>
+							<div class="shipping__row">
+								<label class="shipping__label">
+									<b>Expiration Date</b>
+									<input type="text" class="shipping__input" placeholder="MM/YYYY">
+								</label>
+							</div>
+							<div class="shipping__row shipping__row--flex">
+								<label class="shipping__label">
+									<b>Card Verification Number</b>
+									<input type="text" class="shipping__input shipping__input--sm" placeholder="Card Verification Number">
+								</label>
+								<a href="#" target="_blank" class="shipping__link">What is this?</a>
+							</div>
+						</fieldset>
+						<fieldset class="shipping__payment-type shipping__payment-paypal">
+							<dl class="shipping__determ-list">
+								<dt>
+									<label class="shipping__label shipping__label--flex">
+										<input type="radio" name="payment-method" value="paypal">
+										<b class="inline">PayPal</b>
+									</label>
+								</dt>
+								<dd>
+									<img src="img/paypal.png" alt="PayPal Logo" class="shipping__payment-img">
+								</dd>
+							</dl>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="shipping__column">
+					<fieldset class="shipping__step shipping__select-package">
+						<div class="shipping__row">
+							<div class="shipping__package-mock">
+								<img src="img/package-03.png" alt="">
+								<label class="shipping__custom-radio">
+									<input type="radio" name="select-package" value="maximal">
+									<span></span>
+								</label>
+							</div>
+						</div>
+						<div class="shipping__row">
+							<div class="shipping__package-mock">
+								<img src="img/package-02.png" alt="">
+								<label class="shipping__custom-radio">
+									<input type="radio" name="select-package" value="standart">
+									<span></span>
+								</label>
+							</div>
+						</div>
+						<div class="shipping__row">
+							<div class="shipping__package-mock">
+								<img src="img/package-01.png" alt="">
+								<label class="shipping__custom-radio">
+									<input type="radio" name="select-package" value="basic">
+									<span></span>
+								</label>
+							</div>
+						</div>
+						<div class="shipping__row">
+							<button type="submit" class="shipping__submit">Place order</button>
+						</div>
+					</fieldset>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- scripts -->
 	<script src="js/libs/jquery-3.2.1.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
