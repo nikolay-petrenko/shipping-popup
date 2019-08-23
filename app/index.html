@@ -16,13 +16,13 @@
 		<div class="shipping__container">
 			<div class="shipping__header">
 				<h2 class="shipping__main-title">Express Checkout</h2>
-				<p class="shipping__subtitle">Please enter you details below to complete your purchase...</p>
+				<p class="shipping__subtitle">Please enter you details below to complete your&nbsp;purchase...</p>
 			</div>
 			<form class="shipping__content" onsubmit="return false">
 
 				<!-- Billing Address -->
-				<div class="shipping__column">
-					<fieldset class="shipping__step shipping__billing-address">
+				<div class="shipping__column shipping__column--left">
+					<fieldset class="shipping__step" id="billing-address">
 						<h3 class="shipping__title shipping__title--counter">Billing Address</h3>
 						<div class="shipping__row">
 							<label class="shipping__label">
@@ -95,9 +95,9 @@
 					</fieldset>
 				</div>
 
-				<div class="shipping__column shipping__column--border">
+				<div class="shipping__column shipping__column--center">
 					<!-- Shipping Method -->
-					<fieldset class="shipping__step shipping__shipping-method">
+					<fieldset class="shipping__step" id="shipping-method">
 						<h3 class="shipping__title shipping__title--counter">Shipping Method</h3>
 						<div class="shipping__row">
 							<dl class="shipping__determ-list">
@@ -127,8 +127,8 @@
 					</fieldset>
 
 					<!-- Payment Method -->
-					<div class="shipping__step">
-						<fieldset class="shipping__payment-type shipping__payment-card">
+					<div class="shipping__step" id="payment-method">
+						<fieldset class="shipping__payment-type" id="payment-card">
 							<h3 class="shipping__title shipping__title--counter">Payment Method</h3>
 							<div class="shipping__row">
 								<dl class="shipping__determ-list">
@@ -165,7 +165,7 @@
 								<a href="#" target="_blank" class="shipping__link">What is this?</a>
 							</div>
 						</fieldset>
-						<fieldset class="shipping__payment-type shipping__payment-paypal">
+						<fieldset class="shipping__payment-type" id="payment-paypal">
 							<dl class="shipping__determ-list">
 								<dt>
 									<label class="shipping__label shipping__label--flex">
@@ -181,39 +181,69 @@
 					</div>
 				</div>
 
-				<div class="shipping__column">
-					<fieldset class="shipping__step shipping__select-package">
+				<div class="shipping__column shipping__column--right">
+					<fieldset class="shipping__step shipping__step--package">
 						<div class="shipping__row">
-							<div class="shipping__package-mock">
-								<img src="img/package-03.png" alt="">
-								<label class="shipping__custom-radio">
-									<input type="radio" name="select-package" value="maximal">
-									<span></span>
-								</label>
+							<div class="package">
+								<div class="package__header">
+									<span class="package__condition">Buy 3 + <i>Get 2 Free</i></span>
+									<span class="package__shipping">Free shipping</span>
+									<span class="package__discount">Save $251</span>
+								</div>
+								<div class="package__body">
+									<img src="img/package-03.png" alt="" class="package__picture">
+									<label class="package__label">
+										<input type="radio" name="package" value="3" class="package__radio-hidden">
+										<span class="package__radio"></span>
+										<span class="package__checked">Selected</span>
+										<span class="package__unchecked">Select Package</span>
+										<span class="package__background"></span>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="shipping__row">
-							<div class="shipping__package-mock">
-								<img src="img/package-02.png" alt="">
-								<label class="shipping__custom-radio">
-									<input type="radio" name="select-package" value="standart">
-									<span></span>
-								</label>
+							<div class="package">
+								<div class="package__header">
+									<span class="package__condition">Buy 2 + <i>Get 1 Free</i></span>
+									<span class="package__shipping">Free shipping</span>
+									<span class="package__discount">Save $134</span>
+								</div>
+								<div class="package__body">
+									<img src="img/package-02.png" alt="" class="package__picture">
+									<label class="package__label">
+										<input type="radio" name="package" value="2" class="package__radio-hidden">
+										<span class="package__radio"></span>
+										<span class="package__checked">Selected</span>
+										<span class="package__unchecked">Select Package</span>
+										<span class="package__background"></span>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="shipping__row">
-							<div class="shipping__package-mock">
-								<img src="img/package-01.png" alt="">
-								<label class="shipping__custom-radio">
-									<input type="radio" name="select-package" value="basic">
-									<span></span>
-								</label>
+							<div class="package">
+								<div class="package__header">
+									<span class="package__condition">Buy 1</span>
+									<span class="package__shipping">Shipping $5.95</span>
+									<span class="package__discount">Save $20</span>
+								</div>
+								<div class="package__body">
+									<img src="img/package-01.png" alt="" class="package__picture">
+									<label class="package__label">
+										<input type="radio" name="package" value="1" class="package__radio-hidden">
+										<span class="package__radio"></span>
+										<span class="package__checked">Selected</span>
+										<span class="package__unchecked">Select Package</span>
+										<span class="package__background"></span>
+									</label>
+								</div>
 							</div>
-						</div>
-						<div class="shipping__row">
-							<button type="submit" class="shipping__submit">Place order</button>
 						</div>
 					</fieldset>
+					<div class="shipping__row">
+						<button type="submit" class="shipping__submit">Place order</button>
+					</div>
 				</div>
 			</form>
 		</div>
