@@ -157,7 +157,14 @@ $valid-color: green;
   }
 }
 
-.shipping__payment-img {
+.shipping__payment-images {
+  display: flex;
+  justify-content: space-between;
+  max-width: 170px;
+  margin: 0 auto;
+}
+
+.shipping__payment-image {
   width: auto;
   max-height: 30px;
 }
